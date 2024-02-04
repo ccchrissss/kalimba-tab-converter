@@ -46,10 +46,15 @@ let misaKalimba = new Kalimba('n/a', 'n/a', 'C', 17, keyC)
 
 let startingKey = document.querySelector('#input-key')
 let convertButton = document.querySelector('#convert-button')
-let notesInput = document.querySelector('#notes-input')
+let notesInput = document.querySelector('#notes-input').value
 let desiredKey = document.querySelector('#output-key')
 
-convertButton.addEventListener('click', kalimbaKeyChanger)
+// convertButton.addEventListener('click', kalimbaKeyChanger)
+// convertButton.addEventListener('click', myFunkyFunction())
+
+function myFunkyFunction(str) {
+  console.log(document.querySelector(str).value)
+}
 
 function kalimbaKeyChanger(notesInput, desiredKey) {
   // declare variable convertedNotes set it to an empty array
