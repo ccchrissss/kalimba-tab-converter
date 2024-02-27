@@ -13,16 +13,21 @@
   <hr>
   <h3>Input your notes below</h3>
 
+  <p>Example notes:</p>
+  <p>C1 E1 G1</p>
+
   <label>Starting Key</label>
   <select name="input-key" id="input-key">
     <option value="keyC">C</option>
+    <option value="keyG">G</option>
   </select><br /><br />
 
-  <input id="notes-input" placeholder="C1 E1 G1"><button id="convert-button" onclick="myFunkyFunction('#notes-input')">convert</button><br /><br />
+  <input id="notes-input" placeholder="C1 E1 G1"><button id="convert-button" onclick="kalimbaKeyChanger('#notes-input', '#input-key', '#output-key')">convert</button><br /><br />
 
   <label>Desired Key</label>
-  <select name="output-key" id="input-key">
+  <select name="output-key" id="output-key">
     <option value="keyG">G</option>
+    <option value="keyC">C</option>
   </select><br /><br />
   
   <script src="main.js"></script>
