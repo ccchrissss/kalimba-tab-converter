@@ -38,8 +38,8 @@ class Kalimba {
 
 }
 
-const keyG = ['G0', 'A1', 'B1', 'C1', 'D1', 'E1', 'F1', 'G1', 'A2', 'B2', 'C2', 'D2', 'E2', 'F2', 'G2']
-const keyC = ['C0', 'D0', 'E0', 'F0', 'G0', 'A1', 'B1', 'C1', 'D1', 'E1', 'F1', 'G1', 'A2', 'B2', 'C2', 'D2', 'E2']
+const keyG = ['G', 'A', 'B', 'C', 'D', 'E', 'F', 'G2', 'A2', 'B2', 'C2', 'D2', 'E2', 'F2', 'G3']
+const keyC = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C2', 'D2', 'E2', 'F2', 'G2', 'A2', 'B2', 'C3', 'D3', 'E3']
 // const keysList = ['keyC', 'keyG']
 const keysList = [keyC, keyG]
 
@@ -67,10 +67,11 @@ function kalimbaKeyChanger(notesInput, startingKey, desiredKey) {
   // return convertedNotes
 
   let convertedNotes = []
+      notesInput = document.querySelector(notesInput).value
+      startingKey = document.querySelector(startingKey).value
+      desiredKey = document.querySelector(desiredKey).value
+      convertedNotesEl = document.querySelector('#converted-notes')
 
-  notesInput = document.querySelector(notesInput).value
-  startingKey = document.querySelector(startingKey).value
-  desiredKey = document.querySelector(desiredKey).value
   
 
   notesInput = notesInput.split(' ')
@@ -79,9 +80,6 @@ function kalimbaKeyChanger(notesInput, startingKey, desiredKey) {
   console.log(desiredKey)
   console.log(keysList)
   console.log(keysList.indexOf(keyG))
-
-
-  console.log(keysList)
 
  
 
@@ -103,9 +101,8 @@ function kalimbaKeyChanger(notesInput, startingKey, desiredKey) {
     
   }
 
-  // console.log(convertedNotes)
-  // return convertedNotes.join(' ')
-  console.log(convertedNotes.join(' '))
+  convertedNotes = convertedNotes.join(' ')
+  convertedNotesEl.innerText = convertedNotes
 
 }
 
