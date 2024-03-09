@@ -46,6 +46,17 @@ const keysList = [keyC, keyG]
 let myKalimba = new Kalimba('Hugh Tracey', 'iForget', 'G', 15, keyG)
 let misaKalimba = new Kalimba('n/a', 'n/a', 'C', 17, keyC)
 
+
+const notesDisplayButton = document.querySelector('#notes-display-button')
+
+notesDisplayButton.addEventListener('click', displayAllNotesAllKeys)
+
+function displayAllNotesAllKeys() {
+
+  
+
+}
+
 // let startingKey = document.querySelector('#input-key')
 // let convertButton = document.querySelector('#convert-button')
 // let notesInput = document.querySelector('#notes-input').value
